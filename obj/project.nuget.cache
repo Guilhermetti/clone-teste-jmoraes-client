@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hu4XwjkQ1Sw=",
+  "success": true,
+  "projectFilePath": "D:\\Softwares\\Soluções\\teste-jmoraes\\TesteDevAPI - Forms\\JMoraesDesktopClient\\JMoraesDesktopClient\\JMoraesDesktopClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mathe\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
