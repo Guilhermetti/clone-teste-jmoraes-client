@@ -175,38 +175,35 @@ namespace JMoraesDesktopClient.Forms
             var response = await client.GetAsync($"https://localhost:5001/api/product/paged?pageNumber={currentPage}&pageSize={pageSize}&categoryId={selectedCategory.Id}");
             if (await ApiSession.CheckUnauthorized(response, this)) return;
 
-            if (response.IsSuccessStatusCode)
+            var json = await response.Content.ReadAsStringAsync();
+            var paginated = JsonConvert.DeserializeObject<PaginatedResponse<Product>>(json);
+            products = paginated?.Items ?? new();
+
+            IEnumerable<Product> sorted = products;
+            if (!string.IsNullOrEmpty(currentSortColumn))
             {
-                var json = await response.Content.ReadAsStringAsync();
-                var paginated = JsonConvert.DeserializeObject<PaginatedResponse<Product>>(json);
-                products = paginated?.Items ?? new();
-
-                IEnumerable<Product> sorted = products;
-                if (!string.IsNullOrEmpty(currentSortColumn))
+                var prop = typeof(Product).GetProperty(currentSortColumn);
+                if (prop != null)
                 {
-                    var prop = typeof(Product).GetProperty(currentSortColumn);
-                    if (prop != null)
-                    {
-                        sorted = sortAscending
-                            ? products.OrderBy(p => prop.GetValue(p, null))
-                            : products.OrderByDescending(p => prop.GetValue(p, null));
-                    }
+                    sorted = sortAscending
+                        ? products.OrderBy(p => prop.GetValue(p, null))
+                        : products.OrderByDescending(p => prop.GetValue(p, null));
                 }
-
-                var productList = sorted.Select(p => new
-                {
-                    p.Id,
-                    p.Name,
-                    p.Description,
-                    Price = p.Price
-                }).ToList();
-
-                dgvProducts.DataSource = productList;
-                dgvProducts.Columns["Price"].HeaderText = "Preço";
-                dgvProducts.Columns["Price"].DefaultCellStyle.Format = "C2";
-                lblPageNumber.Text = $"Página {currentPage}";
-                txtDetails.Clear();
             }
+
+            var productList = sorted.Select(p => new
+            {
+                p.Id,
+                p.Name,
+                p.Description,
+                Price = p.Price
+            }).ToList();
+
+            dgvProducts.DataSource = productList;
+            dgvProducts.Columns["Price"].HeaderText = "Preço";
+            dgvProducts.Columns["Price"].DefaultCellStyle.Format = "C2";
+            lblPageNumber.Text = $"Página {currentPage}";
+            txtDetails.Clear();
         }
 
         private void DgvProducts_SelectionChanged(object? sender, EventArgs e)

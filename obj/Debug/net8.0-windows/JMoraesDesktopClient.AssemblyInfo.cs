@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JMoraesDesktopClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fa12dc116074ece579282a8087a5ec7ae4aeefb")]
 [assembly: System.Reflection.AssemblyProductAttribute("JMoraesDesktopClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JMoraesDesktopClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

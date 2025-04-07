@@ -14,6 +14,7 @@ D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\J
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesDesktopClient.AssemblyInfoInputs.cache
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesDesktopClient.AssemblyInfo.cs
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesDesktopClient.csproj.CoreCompileInputs.cache
+D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesDesktopClient.sourcelink.json
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesD.AFBF8BE5.Up2Date
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\JMoraesDesktopClient.dll
 D:\Softwares\Soluções\teste-jmoraes\TesteDevAPI - Forms\JMoraesDesktopClient\JMoraesDesktopClient\obj\Debug\net8.0-windows\refint\JMoraesDesktopClient.dll
